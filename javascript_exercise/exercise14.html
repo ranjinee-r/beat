@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .c1{
+        background-color: beige;
+        display: flex;
+        justify-content: center;
+        padding: 20px; 
+    }
+    table{
+        background-color: rgb(247, 247, 185);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+    }
+    table,td{
+        padding: 20px;
+    }
+    input{
+        padding: 10px 80px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #fff;
+    }
+    button{
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #fff;
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row r1">
+            <div class="col-lg-12 c1">
+                <h1>CALCULATOR</h1>
+            </div>
+            <div class="col-lg-12 c1">
+                <table> 
+                    <tr>
+                        <td colspan="4"><input type="text" id="num" readonly></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><input type="text" id="result" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" onclick="display('1')">1</button></td>
+                        <td><button type="button" onclick="display('2')">2</button></td>
+                        <td><button type="button" onclick="display('3')">3</button></td>
+                        <td><button type="button" onclick="display('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" onclick="display('4')">4</button></td>
+                        <td><button type="button" onclick="display('5')">5</button></td>
+                        <td><button type="button" onclick="display('6')">6</button></td>
+                        <td><button type="button" onclick="display('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" onclick="display('7')">7</button></td>
+                        <td><button type="button" onclick="display('8')">8</button></td>
+                        <td><button type="button" onclick="display('9')">9</button></td>
+                        <td><button type="button" onclick="display('*')">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" onclick="display('0')">0</button></td>
+                        <td><button type="button" onclick="display('.')">.</button></td>
+                        <td><button type="button" onclick="display('/')">/</button></td>
+                        <td><button type="button" onclick="clearing()">c</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><button type="button" onclick="calculate()">Calculate</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function display(a){
+            document.getElementById('num').value+=a;
+        }
+        function calculate(){
+            const expression=document.getElementById('num').value;
+            const result=eval(expression);
+            document.getElementById('result').value=result;
+        }
+        function clearing(){
+            document.getElementById('num').value="";
+            document.getElementById('result').value="";        
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

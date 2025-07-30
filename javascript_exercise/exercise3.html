@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculation</h1>
+    <p>Addition: 5+5= <span id="sum"></span></p>
+    <button type="button" onclick="sum()">ADD</button>
+    <p>Substraction: 5-5= <span id="diff"></span></p>
+    <button type="button" onclick="diff()">SUB</button>
+    <p>Multiplication: 5*5= <span id="mul"></span></p>
+    <button type="button" onclick="mul()">MULTIPLY</button>
+    <p>Division: 5/5= <span id="div"></span></p>
+    <button type="button" onclick="div()">DIVIDE</button>
+    <script>
+        let a,b;
+        a=5;
+        b=5;
+        function sum(){
+            document.getElementById('sum').innerText=a+b;
+        }
+        function diff(){
+            document.getElementById('diff').innerText=a-b;
+        }
+        function mul(){
+            document.getElementById('mul').innerText=a*b;
+        }
+        function div(){
+            document.getElementById('div').innerText=a/b;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+div h1{
+            font-style: italic;
+        }
+div div h1{
+    font-style: italic;
+}
+h1#demo{
+    color:blueviolet
+}
+.cls{
+    color: rgb(255, 0, 179);
+}
+p.padding{
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+p.border{
+    border:solid blue;
+}
+
+div{
+    background-color: rgba(252, 2, 2, 0.392);
+}
+

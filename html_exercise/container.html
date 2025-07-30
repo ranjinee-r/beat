@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Styled Layout</title>
+  <style>
+    /* Container */
+    .c1 {
+      background-color: rgb(175, 60, 60);
+      padding: 20px;
+    }
+
+    /* Row */
+    .r1 {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(156, 102, 102);
+      padding: 10px;
+    }
+
+    /* Column */
+    .col {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      background-color: rgb(108, 102, 156);
+      margin: 5px;
+      color: white;
+      border-radius: 5px;
+    }
+
+    /* Headings */
+    .col h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container c1">
+      <div class="row r1">
+        <div class="col">
+          <h1>Home</h1>
+          <img src="" alt="">
+        </div>
+        <div class="col">
+          <h1>Menu</h1>
+          <img src="" alt="">
+        </div>
+        <div class="col">
+          <h1>Contact</h1>
+          <img src="" alt="">
+        </div>
+        
+      </div>
+    </div>
+  </header>
+
+</body>
+</html>

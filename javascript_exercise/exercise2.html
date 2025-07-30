@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggle</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+<body>
+    <br><br><br><br><br><br>
+    <button type="button" onclick="bulb_on()">Turn on the Bulb</button>
+    <img src="bulb_off.webp" alt="bulb off" height="400" id="image">
+    <button type="button" onclick="bulb_off()">Turn off the Bulb</button>
+
+    <script>
+        function bulb_on() {
+            document.getElementById('image').src = 'bulb_on.png';
+        }
+
+        function bulb_off() {
+            document.getElementById('image').src = 'bulb_off.webp';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(78, 77, 77);
+    font-size: 25px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav{
+    float: left;
+    font-size: 20px;
+    width: 30%;
+    height: 500px;
+    padding: 20px;
+    background-color: rgb(181, 180, 180);
+    line-height: 30px;
+}
+article{
+    float:left;
+    width: 70%;
+    font-size: 20px;
+    height:500px;
+    padding:20px;
+    background-color: rgb(225, 222, 222);
+    text-align: left;
+    line-height: 25px;
+}
+footer{
+    text-align: center;
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+    line-height: 80px;
+}
+.container{
+    float:left;
+    padding:20px;
+    background-color: rgb(225, 222, 222);
+    height:500px;
+    width: 70%;
+    grid-template-columns: auto auto auto;
+    display: grid;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="firstname">First Name</label><br>
+        <input type="text" id="firstname"><br><br>
+
+        <label for="lastname">Last Name</label><br>
+        <input type="text" id="lastname"><br><br>
+
+        <label for="age">Age</label><br>
+        <input type="text" id="age"><br><br>
+
+        <label for="Gender">Gender</label><br>
+        <input type="text" id="gender"><br><br>
+
+        <button type="button" onclick="save()">SAVE</button>
+    </form>
+
+    <script>
+        function save(){
+            const person=new Object();
+            person.first_name=document.getElementById('firstname').value;
+            person.last_name=document.getElementById('lastname').value;
+            person.age=document.getElementById('age').value;
+            person.gender=document.getElementById('gender').value;
+            document.write("First Name: "+person.first_name+"<br>Last Name: "+person.last_name+"<br>Age: "+person.age+"<br>Gender: "+person.gender);
+        }
+    </script>
+</body>
+</html>

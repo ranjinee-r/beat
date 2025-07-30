@@ -1,0 +1,41 @@
+#p1{
+    border-style: dashed;
+    border-width:medium;
+}
+#p2{
+    border-style: dotted;
+}
+#p3{
+    border-style:double;
+    border-width:10px 5px;
+}
+
+#p4{
+    border: solid blue;
+    border-width:10px 5px 20px 40px;
+}
+#p5{
+    border-style:solid;
+    border-color: red;
+    border-width: 2px;
+}
+#p6{
+    border: 2px solid red;
+}
+#p7{
+    border-style:solid dotted dashed double;
+    border-color: red blue green yellow;
+    border-width: 2px 3px 4px 10px;
+}
+#p8{
+    border-style:solid dotted double;
+}
+#p9{
+    border-style: solid double;
+    border-radius:5px;
+}
+#p10{
+    border-left:5px solid blue;
+    background-color: aquamarine;
+    border-radius:2px;
+}

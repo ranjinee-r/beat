@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+        #image {
+            width: 300px;
+            height: auto;
+            /* smooth transition for effects */
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .blur {
+            filter: blur(5px);
+        }
+
+        .brightness {
+            filter: brightness(150%);
+        }
+
+        .rotate {
+            transform: rotate(15deg);
+        }
+
+        .zoom {
+            transform: scale(1.2);
+        }
+</style>
+
+
+<body>
+    <h2>Image Effect Example</h2>
+    <img id="image" src="https://framerusercontent.com/images/kkOygtHRHYPv76o5PniXD7eNI.png?scale-down-to=1024" alt="Sample Image">
+
+    <div style="margin-top: 20px;">
+        <button onclick="applyEffect('grayscale')">Grayscale</button>
+        <button onclick="applyEffect('blur')">Blur</button>
+        <button onclick="applyEffect('brightness')">Brightness</button>
+        <button onclick="applyEffect('rotate')">Rotate</button>
+        <button onclick="applyEffect('zoom')">Zoom</button>
+        <button onclick="resetEffect()">Reset</button>
+    </div>
+
+    <script>
+        function applyEffect(effect) {
+            const img = document.getElementById("image");
+            img.className = ""; // reset existing classes
+            img.classList.add(effect);
+        }
+
+        function resetEffect() {
+            const img = document.getElementById("image");
+            img.className = "";
+        }
+    </script>
+
+</body>
+</html>

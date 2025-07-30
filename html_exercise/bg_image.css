@@ -1,0 +1,11 @@
+body{
+    background-image: url("planets.jpeg");
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position: top right;
+}
+h1{
+    text-align: center;
+    background-color: rgba(102, 101, 101, 0.292);
+    color:rgb(255,255,255)
+}

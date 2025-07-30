@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>passion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <style>
+    .c1 {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+    }
+    .r1{
+        background-image: url("https://images.pexels.com/photos/443399/pexels-photo-443399.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+        position: relative;
+        min-height: 100vh;
+    }
+    .r1::before{
+        content: "";
+        z-index: -1;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.581);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    .logo{
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .nav-link:hover{
+        border-bottom: 2px solid green;
+    }
+    .innovative-solution{
+        background-color: green;
+        color: white;
+        border-style: none;
+        border-radius: 25px;
+        padding: 10px 30px;
+    }
+    .discover-our-work{
+        background-color: green;
+        color: white;
+        border-style: none;
+        border-radius: 25px;
+        padding: 10px 30px;
+    }
+    .discover-our-work:hover{
+        transform:translateY(-5px);
+    }
+    .meet-our-team{
+        background-color: white;
+        color: green;
+        border: 2px solid green;
+        border-radius: 25px;
+        padding: 10px 30px;
+    }
+    .meet-our-team:hover{
+        background-color: green;
+        color: white;
+    }
+    .heading{
+        font-weight: bold;
+        font-size: 50px;
+        color: white;
+    }
+    .white{
+        color: white;
+    }
+    .green{
+        color: green;
+    }
+    .explore-services{
+        background-color: green;
+        color: white;
+        border-style: none;
+        border-radius: 5px;
+        padding: 15px 20px;
+    }
+    .explore-services:hover{
+        box-shadow: 0 5px 10px rgba(66, 93, 66, 0.6);
+        transform:translateY(-5px);
+    }
+    .bold{
+        font-weight: bold;
+    }
+    .watch-demo{
+        background-color: transparent;
+        color: green;
+        border-style: none;
+    }
+    .watch-demo:hover{
+        transform:translateY(-5px);
+    }
+    table,td,th{
+        padding-right: 20px;
+    }
+    .card1:hover{
+        transform:translateY(-5px);
+    }
+    .card1{
+        padding: 10px 60px;
+        text-align: center;
+        color: green;
+        background-color: rgba(61, 60, 60, 0.5);
+        border-radius: 15px;
+        backdrop-filter: blur(5px);
+        border: 0.5px solid rgba(128, 128, 128, 0.523);
+    }
+    .c2{
+        padding: 20px;
+    }
+    .c3{
+        padding: 50px;
+    }
+    .icon{
+        font-size: 30px;
+    }
+    .table-card td{
+        padding: 10px;
+    }
+    .size{
+        font-size: 40px;
+    }
+    .table2{
+        border-top: 1px solid rgba(128, 128, 128, 0.268);
+        border-bottom: 1px solid rgba(128, 128, 128, 0.268);
+    }
+    .table2 th{
+        padding-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+    } 
+    .table2 td{
+        padding-bottom: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .image1{
+        max-width: 100%;
+        min-width: 100%;
+        border-radius: 20px;
+    }
+    .c4{
+        padding: 50px;
+    }
+    .center{
+        text-align: center;
+    }
+    .r3{
+        background-color: rgba(156, 200, 180, 0.23);
+        padding: 30px 30px 90px 30px;
+    }
+    .image2{
+        max-width: 80%;
+        min-height: 80%;
+    }
+    .professional-services{
+        background-color: rgba(156, 200, 180, 0.39);
+        padding: 5px 15px;
+        border-radius: 5px;
+        color: green;
+    }
+    .featured-services{
+        background-color: white;
+        color: black;
+        text-align: left;
+        border-style: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+        max-width: 500px;
+        max-height: 300px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+    }
+    .circle-icon{
+        background-color: green;
+        padding: 20px;
+        border-radius: 100%;
+        font-size: 24px;
+        color: white;
+        width: 70px;
+        height: 70px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .featured-services:hover .circle-icon{
+        background-color: white;
+        color: green;
+    }
+    .featured-services:hover{
+        background-color: green;
+        color: white;
+        transform: translateY(-5px);
+        box-shadow: 0 5px 10px rgba(66, 93, 66, 0.6);
+    }
+    .scroll-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 20px;
+        scroll-behavior: smooth;
+    }
+    .how-we-work{
+        background-color: white;
+        padding: 5px 10px;
+        max-width: 300px;
+        border-radius: 20px;
+        border-style: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+
+    }
+    .r4{
+        padding: 30px;
+        background-color: whitesmoke
+    }
+    .c5{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .steps{
+        background-color: green;
+        border-radius: 20px;
+        padding: 5px 15px;
+    }
+    .circle-icon2{
+        background-color: rgba(0, 128, 0, 0.258);
+        padding: 20px;
+        border-radius: 100%;
+        font-size: 24px;
+        color: green;
+        width: 70px;
+        height: 70px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .how-we-work:hover{
+        border: 1px solid green;
+        transform: translateY(-5px);
+        box-shadow: 0 5px 10px rgba(66, 93, 66, 0.6);
+    }
+    .how-we-work:hover .circle-icon2{
+        background-color: green;
+        color: white;
+        zoom: 120%;
+    }
+    .how-we-work-buttons{
+        background-color: transparent;
+        border-radius: 10px;
+        border-style: none;
+    }
+    .work-card{
+        background-color: transparent;
+        border-style: none;
+        text-align: left;
+    }
+
+    #work1{
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg c1">
+                <p class="d-flex align-items-center mb-0">
+                <span class="ms-4">
+                    <i class="fa-solid fa-envelope"></i> contact@gmail.com &nbsp;
+                    <i class="fa-solid fa-mobile-screen"></i> +1 5589 55488 55
+                </span>
+                <span class="ms-auto">
+                    <i class="fa-brands fa-x-twitter ms-3"></i>
+                    <i class="fa-brands fa-facebook ms-3"></i>
+                    <i class="fa-brands fa-instagram ms-3"></i>
+                    <i class="fa-brands fa-linkedin ms-3 me-5"></i>
+                </span>
+                </p>
+            </div>
+        </div>
+        <div class="row r1">
+            <div class="col-lg-12 c2">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand text-white ms-4 logo" href="#">Passion</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                        <a class="nav-link active text-white ms-3" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-white ms-3" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-white ms-3" href="#">services</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-white ms-3" href="#">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-white ms-3" href="#">Team</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white ms-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-white ms-3 me-5" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-6 c3">
+                <button class="innovative-solution bold">INNOVATIVE SOLUTIONS</button><br><br>
+                <h1 class="heading">Transform Your Buisness <br>With Modern Technology</h1><br>
+                <p class="white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et obcaecati labore totam nesciunt amet, repudiandae doloribus. Perspiciatis itaque nam fugiat voluptatem. Fugiat quasi iusto nulla laudantium expedita vero nesciunt laboriosam?</p><br>
+                <a href="#"><button class="explore-services bold">Explore Services</button></a>
+                <a href="#"><button class="watch-demo ms-4"><i class="fa-solid fa-circle-play"></i> Watch Demo</button></a>
+                <br><br><br><table>
+                    <tr>
+                        <th class="green logo">500+</th>
+                        <th class="green logo">98%</th>
+                        <th class="green logo">24/7</th>
+                    </tr>
+                    <tr>
+                        <td class="white">PROJECTS COMPLETED</td>
+                        <td class="white">CLIENT SATISFACTION</td>
+                        <td class="white">SUPPORT AVAILABLE</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-6 c3">
+                <br><br><br><br><table class="table-card">
+                    <tr>
+                        <td>
+                            <div class="card card1">
+                                <div class="card-body">
+                                    <i class="fa-solid fa-shield icon"></i><br><br>
+                                    <p class="card-text white">Secure & Reliable</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="card card1">
+                                <div class="card-body">
+                                    <i class="fa-solid fa-gauge icon"></i><br><br>
+                                    <p class="card-text white">High Performance</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="card card1">
+                                <div class="card-body">
+                                    <i class="fa-solid fa-people-group icon"></i><br><br>
+                                    <p class="card-text white">Expert Team</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="card card1">
+                                <div class="card-body">
+                                    <i class="fa-solid fa-award icon"></i><br><br>
+                                    <p class="card-text white">Award Winning</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <div class="row bg-white">
+            <div class="col-lg-6 c4">
+                <h2 class="bold size">Transforming Ideas Into Reality Since 2015</h2><br>
+                <p>We are a passionate team of innovators dedicated to creating exceptional digital experiences that drive meaningful results for businesses worldwide.</p>
+                <p>Our journey began with a simple vision: to bridge the gap between cutting-edge technology and human-centered design. Today, we've grown into a trusted partner for companies seeking to transform their digital presence and accelerate their growth.</p>
+                <p>Through collaborative partnerships and innovative solutions, we've helped hundreds of organizations achieve their goals while building lasting relationships founded on trust, transparency, and exceptional results.</p><br>
+                <table class="table2">
+                    <tr>
+                        <th class="green logo">8+</th>
+                        <th class="green logo">450+</th>
+                        <th class="green logo">25</th>
+                    </tr>
+                    <tr>
+                        <td class="text-dark">YEARS EXPERIENCE</td>
+                        <td class="text-dark">PROJECTS COMPLETED</td>
+                        <td class="text-dark">TEAM MEMBERS</td>
+                    </tr>
+                </table><br><br>
+                <button class="discover-our-work bold">DISCOVER OUR WORK</button>&nbsp; &nbsp;
+                <button class="meet-our-team bold">MEET OUR TEAM</button>
+
+            </div>
+            <div class="col-lg-6 c4">
+                <br><br><br><img class="image1" src="https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg" alt="image">
+            </div>
+        </div>
+        <div class="row r3">
+            <h3 class="bold center">Featured Services</h3>
+            <p class="center">Featured Services</p>
+            <div class="col-lg-6 c4">
+                <span class="professional-services">PROFESSIONAL SERVICES</span><br><br>
+                <h2 class="bold size">Elevating Business Performance Through Strategic Solutions</h2><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quas labore doloribus consectetur, accusamus pariatur deleniti fugit iste iusto ut tenetur molestiae sit, quidem nemo architecto ratione aliquam harum quam.</p><br>
+                <a href="#"><button class="explore-services bold">Request a Consultation <i class="fa-solid fa-arrow-right"></i></button></a>
+            </div>
+            <div class="col-lg-6 c4">
+                <img class="image2" src="https://images.pexels.com/photos/4226256/pexels-photo-4226256.jpeg" alt="Consultation">
+            </div>
+            <div class="scroll-container">
+                <div class="col-lg-4">
+                    <div class="card featured-services">
+                        <div class="card-body">
+                            <i class="fa-solid fa-chart-simple circle-icon"></i><br><br>
+                            <h5 class="card-title">Financial Strategy Development</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam maxime esse eius quis pariatur beatae amet magnam doloribus, corporis asperiores sequi rem dolorum provident. Voluptates ut itaque at. Ea, sunt?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card featured-services">
+                        <div class="card-body">
+                            <i class="fa-solid fa-chart-line circle-icon"></i><br><br>
+                            <h5 class="card-title">Market Expansion Advisory</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ab voluptas nisi nam, accusantium neque deserunt repudiandae ut, nihil excepturi deleniti iusto. Laborum officiis saepe consectetur, quis animi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card featured-services">
+                        <div class="card-body">
+                            <i class="fa-solid fa-shield circle-icon"></i><br><br>
+                            <h5 class="card-title">Risk Management Solutions</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi itaque ex neque, aspernatur ducimus ab quas corrupti optio id temporibus! Nam provident optio laborum voluptate ducimus maiores tempore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card featured-services">
+                        <div class="card-body">
+                            <i class="fa-solid fa-lightbulb circle-icon"></i><br><br>
+                            <h5 class="card-title">Innovation & Digital Transformation</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium nihil natus rem asperiores est ipsum odio non odit quia atque tempore, exercitationem magni sed neque, cum dolor illum maiores earum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card featured-services">
+                        <div class="card-body">
+                            <i class="fa-solid fa-people-group circle-icon"></i><br><br>
+                            <h5 class="card-title">Talent Management Strategy</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dignissimos? Totam ea ex, culpa rerum facere praesentium reiciendis ratione odio magni iste corporis itaque voluptatem abexplicabo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row r4">
+            <h3 class="bold center">How We Work</h3>
+            <p class="center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            <div class="col-lg-3 c5">
+                <div class="card how-we-work center">
+                    <div class="card-body">
+                        <i class="fa-solid fa-magnifying-glass circle-icon2"></i><br><br>
+                        <p><span class="steps white bold">STEP 1</span></p><br>
+                        <h5 class="card-title bold">Research & Planning</h5><br>
+                        <p class="card-text">Nulla facilisi morbi tempus iaculis urna id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 c5">
+                <div class="card how-we-work center">
+                    <div class="card-body">
+                        <i class="fa-regular fa-lightbulb circle-icon2"></i><br><br>
+                        <p><span class="steps white bold">STEP 2</span></p><br>
+                        <h5 class="card-title bold">Creative Solutions</h5><br>
+                        <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 c5">
+                <div class="card how-we-work center">
+                    <div class="card-body">
+                        <i class="fa-solid fa-gear circle-icon2"></i><br><br>
+                        <p><span class="steps white bold">STEP 3</span></p><br>
+                        <h5 class="card-title bold">Development</h5><br>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 c5">
+                <div class="card how-we-work center">
+                    <div class="card-body">
+                        <i class="fa-solid fa-rocket circle-icon2"></i><br><br>
+                        <p><span class="steps white bold">STEP 4</span></p><br>
+                        <h5 class="card-title bold">Launch & Support</h5><br>
+                        <p class="card-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <table class="table3">
+                    <tr>
+                        <td>
+                            <button class="how-we-work-buttons" onclick="work1()">
+                                <div class="card work-card">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <i class="fa-solid fa-rocket circle-icon2"></i>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <div class="card-body">
+                                                <p class="card-text"><span class="bold">Vestibulum ante ipsum</span>
+                                                <br> Proin iaculis purus consequat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="how-we-work-buttons" onclick="work2()">
+                                <div class="card work-card">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <i class="fa-solid fa-rocket circle-icon2"></i>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <div class="card-body">
+                                                <p class="card-text"><span class="bold">Vestibulum ante ipsum</span>
+                                                <br> Proin iaculis purus consequat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="how-we-work-buttons" onclick="work3()">
+                                <div class="card work-card">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <i class="fa-solid fa-rocket circle-icon2"></i>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <div class="card-body">
+                                                <p class="card-text"><span class="bold">Vestibulum ante ipsum</span>
+                                                <br> Proin iaculis purus consequat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="how-we-work-buttons" onclick="work4()">
+                                <div class="card work-card">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <i class="fa-solid fa-rocket circle-icon2"></i>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <div class="card-body">
+                                                <p class="card-text"><span class="bold">Vestibulum ante ipsum</span>
+                                                <br> Proin iaculis purus consequat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="how-we-work-buttons" onclick="work5()">
+                                <div class="card work-card">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <i class="fa-solid fa-rocket circle-icon2"></i>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <div class="card-body">
+                                                <p class="card-text"><span class="bold">Vestibulum ante ipsum</span>
+                                                <br> Proin iaculis purus consequat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-9">
+                <div class="card mb-3" id="work1">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                        <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function work1(){
+            document.getElementById('work1').innerHTML = `
+            <div class="row g-0"> 
+                <div class="col-md-6">
+                <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6">
+                <div class="card-body">
+                    <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                </div>
+                </div>
+            </div>
+            `;
+        }
+        function work2(){
+            document.getElementById('work1').innerHTML = `
+            <div class="row g-0"> 
+                <div class="col-md-6">
+                <img src="https://images.pexels.com/photos/39517/rose-flower-blossom-bloom-39517.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6">
+                <div class="card-body">
+                    <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                </div>
+                </div>
+            </div>
+            `;
+        }
+        function work3(){
+            document.getElementById('work1').innerHTML = `
+            <div class="row g-0"> 
+                <div class="col-md-6">
+                <img src="https://images.pexels.com/photos/906150/pexels-photo-906150.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6">
+                <div class="card-body">
+                    <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                </div>
+                </div>
+            </div>
+            `;
+        }
+        function work4(){
+            document.getElementById('work1').innerHTML = `
+            <div class="row g-0"> 
+                <div class="col-md-6">
+                <img src="https://images.pexels.com/photos/1387037/pexels-photo-1387037.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6">
+                <div class="card-body">
+                    <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                </div>
+                </div>
+            </div>
+            `;
+        }
+        function work5(){
+            document.getElementById('work1').innerHTML = `
+            <div class="row g-0"> 
+                <div class="col-md-6">
+                <img src="https://images.pexels.com/photos/2176593/pexels-photo-2176593.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6">
+                <div class="card-body">
+                    <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                </div>
+                </div>
+            </div>
+            `;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

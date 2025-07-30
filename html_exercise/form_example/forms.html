@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Html forms</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>Form</h1>
+        <form action="" autocomplete="on" nonvalidate method="post" enctype="multipart/form-data">
+            <label for="first">First Name</label><br>
+            <input type="text" name="fname" id="first" required placeholder="Enter your first name"><br><br>
+
+            <label for="last">Last Name</label><br>
+            <input type="text" name="lname" id="last" maxlength="5" required><br><br>
+
+            <label for="pwd">Password</label><br>
+            <input type="password" id="pwd" name="pwd" required><br><br>
+
+            <label for="cpwd">Confirm Password</label><br>
+            <input type="password" id="cpwd" name="cpwd" disabled><br><br>
+
+            <label for="age">Age</label><br>
+            <input type="number" name="age" id="age" min="18" max="25" size="2" step="2" value="18"><br><br>
+
+            <label>Gender</label><br>
+            <input type="radio" name="gender" id="male" value="Male" checked>
+            <label for="male">Male</label><br>
+            <input type="radio" name="gender" id="female" value="Female">
+            <label for="female">Female</label><br>
+            <input type="radio" name="gender" id="others" value="Others">
+            <label for="others">Others</label><br><br>
+
+            <label for="phone">Contact No</label><br>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}"><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" value="abc@gmail.com" readonly><br><br>
+
+            <label for="dob">Date of Birth</label><br>
+            <input type="date" name="dob" id="dob" min="2000-01-01" max="2004-01-01" value="2000-01-01"><br><br>
+            <fieldset>
+                <legend>PERSONAL ADDRESS!</legend>
+                <label for="add">Address</label><br>
+                <textarea name="address" id="add" rows="10" cols="50">Default value.</textarea><br><br>
+
+                <label for="city">City</label><br>
+                <input list="city">
+                <datalist name="city" id="city">
+                    <option value="Mannarkkad">
+                    <option value="Perinthalmanna">
+                    <option value="Makkaraparamba">
+                    <option value="kottoppadam">
+                </datalist><br><br>
+
+                <label for="state">State</label><br>
+                <select name="states" id="state" size="3" multiple>
+                    <optgroup label="South India">
+                        <option value="kerala">Kerala</option>
+                        <option value="tamil nadu">Tamil Nadu</option>
+                        <option value="Karnataka" selected>Karnataka</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    </optgroup>
+                    <option value="Maharastra">Maharastra</option>
+                    <option value="odisha">Odisha</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                </select><br><br>
+            </fieldset> <br>
+
+            <label>Hobbies</label><br>
+            <input type="checkbox" name="hobbies" id="reading" value="Reading" checked>
+            <label for="reading">Reading</label><br>
+            <input type="checkbox" name="hobbies" id="singing" value="Singing">
+            <label for="singing">Singing</label><br>
+            <input type="checkbox" name="hobbies" id="dancing" value="Dancing">
+            <label for="dancing">Dancing</label><br><br>
+
+            <label for="favcolor">Favourite Colour</label><br>
+            <input type="color" id="favcolor" name="favcolor"><br><br>
+
+            <label for="currenttime">Current Date and Time</label><br>
+            <input type="datetime-local" id="currenttime" name="currenttime"><br><br>
+
+            <fieldset>
+            <legend>Upload Files:</legend>            
+            <label for="photo">Upload photo</label><br>
+            <input type="file" name="photo" id="photo"><br><br>
+
+            <label for="resume">Upload Resume</label><br>
+            <input type="file" name="resume" id="resume"><br><br>
+            </fieldset><br><br>
+
+            <input type="hidden" name="timestamp" value="1234">
+            
+            <label for="month">Select Month</label><br>
+            <input type="month" id="month" name="month"><br><br>
+
+            <label for="range">Select Price Range</label><br>
+            <input type="range" id="range" name="price" min="3000" max="30000" value="3000"><br><br>
+
+            <label for="search">Search</label><br>
+            <input type="search" id="search" name="search"><br><br>
+
+            <label for="link">Add URL</label><br>
+            <input type="url" id="link" name="link"><br><br>
+
+            <label for="week">Select week</label>
+            <input type="week" id="week" name="week" autofocus><br><br>
+
+            <input type="button" value="Save" onclick="alert('Saved Successfully!')">
+            <input type="submit" onclick="alert('Submitted Successfully!')" formnovalidate="formnovalidate">
+            <input type="reset" onclick="alert('Reset Successfully!')">
+            <button type="button" onclick="alert('Button Clicked!')">FAQ</button>
+            <button type="submit">SUBMIT</button>
+            <br><br>
+
+            <input type="image" src="html.jpeg" alt="submit" width="120" height="120">
+        </form>
+    </body>
+</html>
