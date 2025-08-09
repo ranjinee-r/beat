@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <button type="button" onclick="findlength()">Find Length</button>
+    <p id="len"></p>
+
+    <input type="text" id="name1">
+    <input type="text" id="ind">
+    <button type="button" onclick="charat()">Find the character</button>
+    <p id="char"></p>
+    <p id="char1"></p>
+    <p id="char2"></p>
+
+    <input type="text" id="name2">
+    <input type="text" id="name3">
+    <button type="button" onclick="concat()">Concat two strings</button>
+    <p id="str"></p>
+
+    <input type="text" id="name4">
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <button type="button" onclick="slicing()">Slicing</button>
+    <p id="str1"></p>
+
+    <input type="text" id="name5">
+    <input type="text" id="num3">
+    <input type="text" id="num4">
+    <button type="button" onclick="sub()">Substring</button>
+    <p id="str2"></p>
+
+    <input type="text" id="name6">
+    <button type="button" onclick="upper()">To upper case</button>
+    <p id="str3"></p>
+
+    <input type="text" id="name7">
+    <button type="button" onclick="lower()">To lower case</button>
+    <p id="str4"></p>
+
+    <input type="text" id="name8">
+    <button type="button" onclick="triming()">Trim</button>
+    <p id="str5"></p>
+
+    <script>
+        function findlength(){
+            let x=document.getElementById('name').value;
+            document.getElementById('len').innerHTML="Length: "+x.length;
+        }
+
+        function charat(){
+            let x=document.getElementById('name1').value;
+            let pos=document.getElementById('ind').value;
+            let num=Number(pos);
+            document.getElementById('char').innerHTML="Character in position "+pos+" is: "+x.charAt(num);
+            document.getElementById('char1').innerHTML="Character in position "+pos+" is: "+x.at(num);
+            document.getElementById('char2').innerHTML="Character in position "+pos+" is: "+x[num];
+        }
+
+        function concat(){
+            const x=document.getElementById('name2').value;
+            const y=document.getElementById('name3').value;
+            document.getElementById('str').innerHTML="Concatenation of two string: "+x.concat(" ",y);
+        }
+
+        function slicing(){
+            const x=document.getElementById('name4').value;
+            const y=document.getElementById('num1').value;
+            const z=document.getElementById('num2').value;
+            document.getElementById('str1').innerHTML=x.slice(y,z);
+        }
+
+        function upper(){
+            const x=document.getElementById('name6').value;
+            document.getElementById('str3').innerHTML=x.toUpperCase();
+        }
+
+        function lower(){
+            const x=document.getElementById('name7').value;
+            document.getElementById('str4').innerHTML=x.toLowerCase();
+        }
+
+        function triming(){
+            const x=document.getElementById('name7').value;
+            document.getElementById('str4').innerHTML=x.toLowerCase();
+        }
+
+    </script>
+</body>
+</html>

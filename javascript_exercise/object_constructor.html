@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p><br>
+
+    <script>
+        function person(first,last,age,gender){
+            this.first=first;
+            this.last=last;
+            this.age=age;
+            this.gender=gender;
+        }
+        const student1=new person("Ranjinee","R",21,"Female",9879);
+        const student2=new person("Nahva","C",22,"Female");
+        const student3=new person("Nadhiya","K P",22,"Female");
+        const student4=new person("Nafeesathul","Kamaru",21,"Female");
+        // document.getElementById('demo').innerHTML=student1.first+" "+student1.last+"<br>"+student1.age+"<br>"+student1.gender+"<br><br>"+student2.first+" "+student2.last+"<br>"+student2.age+"<br>"+student2.gender+"<br><br>"+student3.first+" "+student3.last+"<br>"+student3.age+"<br>"+student3.gender+"<br><br>"+student4.first+" "+student4.last+"<br>"+student4.age+"<br>"+student4.gender+"<br><br>";
+        // student2.changename=function(name){
+        //     this.last=name;
+        // }
+        person.prototype.changename=function(name){
+            this.last=name;
+        }
+        student2.changename("noor");
+        student3.changename("Hafsath");
+        document.getElementById('demo').innerHTML=student1.first+" "+student1.last+"<br>"+student1.age+"<br>"+student1.gender+"<br><br>"+student2.first+" "+student2.last+"<br>"+student2.age+"<br>"+student2.gender+"<br><br>"+student3.first+" "+student3.last+"<br>"+student3.age+"<br>"+student3.gender+"<br><br>"+student4.first+" "+student4.last+"<br>"+student4.age+"<br>"+student4.gender+"<br><br>";
+
+    </script>
+</body>
+</html>

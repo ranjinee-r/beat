@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input:optional {
+        background-color: #f00a0a;
+    }
+    input:required{
+        background-color: blue;
+    }
+    input:disabled{
+        background-color: brown;
+    }
+    input:valid{
+        border: 5px solid yellow;
+    }
+    input:invalid{
+        border: 5px solid green;
+    }
+</style>
+<body>
+    <form action="" name="form1" id="form1" onsubmit="return val()">
+        <label for="Email">Enter Email Address: </label>
+        <input type="text" name="email" id="Email" placeholder="Email" required><br><br>
+        <label for="pwd">Enter Password: </label>
+        <input type="password" name="p1" id="pwd1" disabled><br><br>
+        <label for="pwd">Confirm Password: </label>
+        <input type="password" name="p2" id="pwd2"><br><br>
+        <label for="age">Age: </label>
+        <input type="text" id="age" name="age"><br><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        function val(){
+            const x=document.forms["form1"]["Email"].value;
+            if(x.search("@")==-1){
+                alert("Please enter valid email id");
+                return false;
+            }
+
+            const p1=document.forms["form1"]["pwd1"].value;
+            const p2=document.forms["form1"]["pwd2"].value;
+            if(p1!=p2){
+                alert("Password does not match.")
+                return false;
+            }
+
+            const age=document.forms["form1"]["age"].value;
+            if(isNaN(age) || Number(age)<=18 || Number(age)>=60){
+                alert("Age between 18-60 only.");
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

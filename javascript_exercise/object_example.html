@@ -12,16 +12,23 @@
         document.getElementById('demo').innerText="First Name: "+person.First_name+ "\nLast Name: "+person.Last_Name+"\nAge: "+person.Age+"\nGender: "+person.Gender;
     </script> -->
 
-    <!-- <script>
+    <script>
         const person={}
         person.First_name="Ranjinee";
         person.Last_name="R";
         person.Age=21;
         person.Gender="Female";
-        document.getElementById('demo').innerText="First Name: "+person.First_name+ "\nLast Name: "+person.Last_name+"\nAge: "+person.Age+"\nGender: "+person.Gender;
-    </script> -->
+        let text=JSON.stringify(person);
+        document.getElementById('demo').innerHTML=text; 
+        // let text=" ";
+        // for (let [key,value] of Object.entries(person)){
+        //     text+=key+": "+value+"<br>";
+        // }
+        // document.getElementById('demo').innerHTML=text;
+        // document.getElementById('demo').innerText="First Name: "+person.First_name+ "\nLast Name: "+person.Last_name+"\nAge: "+person.Age+"\nGender: "+person.Gender;
+    </script>
 
-    <script>
+    <!-- <script>
         const person=new Object();
         person["First_Name"]="Ranjinee";
         person["Last_Name"]="R";
@@ -39,8 +46,7 @@
                 text+=person[x]();
             }
         }
-        
         document.getElementById('demo').innerHTML=text;
-    </script>
+    </script> -->
 </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loading()">
+    
+    <select onchange="demo()" id="options">
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+        <option value="four">Four</option>
+        <option value="five">Five</option>
+        <option value="six">Six</option>
+        <option value="seven">Seven</option>
+    </select>
+    <p id="Demo"></p>
+    <details ontoggle="">
+        <summary>check</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam deleniti dolores eveniet vero, quod inventore illo minima quis magnam et, saepe ad. Adipisci possimus dignissimos, consequuntur quibusdam quidem aperiam!</p>
+    </details>
+
+    <input type="text" id="name" onkeydown="blue()" onkeyup="red()">
+    <img src="bulb_on.png" alt="bulb" width="120" height="120" onmouseover="zoomimg(this)" onmouseout="zoomout(this)" >
+    <script>
+        function demo(){
+            let x=document.getElementById('options').value;
+            document.getElementById('Demo').innerHTML='you selected: '+ x;
+        }
+
+        function zoomimg(x){
+            x.style.height="500px";
+            x.style.width="500px"
+        }
+
+        function zoomout(x){
+            x.style.height="120px";
+            x.style.width="120px";
+        }
+
+        function loading(){
+            window.alert("The page is loading")
+        }
+        
+        function blue(){
+            x=document.getElementById('name');
+            x.style.backgroundColor='blue'
+        }
+        function red(){
+            x=document.getElementById('name');
+            x.style.backgroundColor='red'
+        }
+    </script>
+</body>
+</html>
