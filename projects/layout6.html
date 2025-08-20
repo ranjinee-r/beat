@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>passion</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
-  <style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>passion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+<style>
     .c1 {
-      background-color: black;
-      color: white;
-      padding: 10px 20px;
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
     }
     .r1{
         background-image: url("https://images.pexels.com/photos/443399/pexels-photo-443399.jpeg");
@@ -51,6 +51,7 @@
         border-style: none;
         border-radius: 25px;
         padding: 10px 30px;
+        transition: transform 0.3s ease;
     }
     .discover-our-work:hover{
         transform:translateY(-5px);
@@ -83,6 +84,7 @@
         border-style: none;
         border-radius: 5px;
         padding: 15px 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .explore-services:hover{
         box-shadow: 0 5px 10px rgba(66, 93, 66, 0.6);
@@ -95,6 +97,7 @@
         background-color: transparent;
         color: green;
         border-style: none;
+        transition: transform 0.3s ease;
     }
     .watch-demo:hover{
         transform:translateY(-5px);
@@ -113,6 +116,7 @@
         border-radius: 15px;
         backdrop-filter: blur(5px);
         border: 0.5px solid rgba(128, 128, 128, 0.523);
+        transition: transform 0.3s ease;
     }
     .c2{
         padding: 20px;
@@ -178,6 +182,7 @@
         max-width: 500px;
         max-height: 300px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     }
     .circle-icon{
@@ -203,12 +208,17 @@
         box-shadow: 0 5px 10px rgba(66, 93, 66, 0.6);
     }
     .scroll-container {
-        display: flex;
-        overflow-x: auto;
-        gap: 20px;
-        padding: 20px;
-        scroll-behavior: smooth;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 20px;
     }
+
+    .scroll-container::-webkit-scrollbar {
+        display: none; 
+    }
+
     .how-we-work{
         background-color: white;
         padding: 5px 10px;
@@ -216,7 +226,7 @@
         border-radius: 20px;
         border-style: none;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 
     }
     .r4{
@@ -226,6 +236,9 @@
     .c5{
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+    .c6{
+        padding-top: 50px;
     }
     .steps{
         background-color: green;
@@ -268,6 +281,53 @@
     #work1{
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
+
+    .circle-icon3{
+        border-radius: 100%;
+        width: 350px;
+        height: 340px;
+        object-fit:cover;
+    }
+    .r5{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .profile {
+    position: relative;
+    width: 350px;
+    height: 340px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: auto;
+    }
+
+    .info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    }
+
+    .profile:hover .info{
+    opacity: 1;
+    }
+
+    .info h3,
+    .info p {
+    margin: 0;
+    font-size: 14px;
+    }
 </style>
 </head>
 <body>
@@ -301,18 +361,18 @@
                         <a class="nav-link active text-white ms-3" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link text-white ms-3" href="#">About</a>
+                        <a class="nav-link text-white ms-3" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link text-white ms-3" href="#">services</a>
+                        <a class="nav-link text-white ms-3" href="#services">services</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link text-white ms-3" href="#">Portfolio</a>
+                        <a class="nav-link text-white ms-3" href="#work">Work Flow</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link text-white ms-3" href="#">Team</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white ms-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
                         </a>
@@ -321,7 +381,7 @@
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                         <a class="nav-link text-white ms-3 me-5" href="#">Contact</a>
                         </li>
@@ -391,7 +451,7 @@
             </div>
         </div>
         <div class="row bg-white">
-            <div class="col-lg-6 c4">
+            <div class="col-lg-6 c4" id="about">
                 <h2 class="bold size">Transforming Ideas Into Reality Since 2015</h2><br>
                 <p>We are a passionate team of innovators dedicated to creating exceptional digital experiences that drive meaningful results for businesses worldwide.</p>
                 <p>Our journey began with a simple vision: to bridge the gap between cutting-edge technology and human-centered design. Today, we've grown into a trusted partner for companies seeking to transform their digital presence and accelerate their growth.</p>
@@ -416,8 +476,8 @@
                 <br><br><br><img class="image1" src="https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg" alt="image">
             </div>
         </div>
-        <div class="row r3">
-            <h3 class="bold center">Featured Services</h3>
+        <div class="row r3" id="services">
+            <h3 class="bold center">Featured Services</h3><hr>
             <p class="center">Featured Services</p>
             <div class="col-lg-6 c4">
                 <span class="professional-services">PROFESSIONAL SERVICES</span><br><br>
@@ -476,8 +536,8 @@
                 </div>
             </div>
         </div>
-        <div class="row r4">
-            <h3 class="bold center">How We Work</h3>
+        <div class="row r4" id="work">
+            <h3 class="bold center">How We Work</h3><hr>
             <p class="center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
             <div class="col-lg-3 c5">
                 <div class="card how-we-work center">
@@ -519,7 +579,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 c6">
                 <table class="table3">
                     <tr>
                         <td>
@@ -618,7 +678,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-9 c6">
                 <div class="card mb-3" id="work1">
                     <div class="row g-0">
                         <div class="col-md-6">
@@ -633,8 +693,141 @@
                 </div>
             </div>
         </div>
+        <div class="row r5">
+            <h3 class="bold center">Our Team</h3><hr>
+            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="scroll-container">
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile">
+                        <img src="https://images.pexels.com/photos/27919253/pexels-photo-27919253.jpeg" alt="person1" class="circle-icon3">
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    
 
     <script>
         function work1(){
@@ -717,6 +910,25 @@
             </div>
             `;
         }
+        const scroll_container=document.querySelectorAll('.scroll-container')
+        scroll_container.forEach(scroll_container => {
+            let scroll_amount=0;
+            const scrollstep=300;
+            const delay=2500;
+            function autoscroll(){
+                if(scroll_amount>=scroll_container.scrollWidth-scroll_container.clientWidth){
+                    scroll_amount=0;
+                }
+                else{
+                    scroll_amount+=scrollstep;
+                }
+                scroll_container.scrollTo({
+                    left: scroll_amount,
+                    behavior: "smooth"
+                });
+            }
+            setInterval(autoscroll,delay);
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
